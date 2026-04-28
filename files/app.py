@@ -25,8 +25,8 @@ st.set_page_config(
 # ─────────────────────────── Load artifacts ─────────────────────────
 @st.cache_resource
 def load_artifacts():
-    bundle  = joblib.load("best_model.joblib")
-    results = json.load(open("model_results.json"))
+    bundle  = joblib.load(os.path.join(os.path.dirname(__file__), "best_model.joblib"))
+    results = json.load(open(os.path.join(os.path.dirname(__file__), "model_results.json")))
     return bundle, results
 
 bundle, results = load_artifacts()
