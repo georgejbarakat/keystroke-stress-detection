@@ -7,6 +7,7 @@ Two ways to predict:
 
 Run with:  streamlit run app.py
 """
+import os
 import time
 import json
 import joblib
